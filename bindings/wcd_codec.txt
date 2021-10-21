@@ -654,7 +654,7 @@ Example:
 	};
 };
 
-WSA883x Soundwire slave device as child of Soundwire master in Bolero codec
+WSA883x Soundwire slave device as child of Soundwire master in LPASS codec
 
 Required properties:
  - compatible = "qcom,wsa883x";
@@ -662,7 +662,7 @@ Required properties:
  - qcom,spkr-sd-n-gpio: speaker reset gpio
 
 Optional properties:
- - bolero-handle: phandle to bolero codec
+ - lpass-cdc-handle: phandle to lpass-cdc codec
  - cdc-vdd-1p8-supply: phandle of VDD 1.8V supply's regulator device tree node.
  - qcom,cdc-vdd-1p8-voltage: VDD 1.8V supply's voltage level min and max in mV.
  - qcom,cdc-vdd-1p8-current: VDD 1.8V supply's max current in mA.
@@ -675,7 +675,7 @@ wsa883x_0221: wsa883x@02170221 {
 	compatible = "qcom,wsa883x";
 	reg = <0x02 0x02170221>;
 	qcom,spkr-sd-n-gpio = <&tlmm 80 0>;
-	bolero-handle = <&bolero>;
+	lpass-cdc-handle = <&lpass_cdc>;
 
 	cdc-vdd-1p8-supply = <&S10B>;
 	qcom,cdc-vdd-1p8-voltage = <1800000 1800000>;
@@ -683,7 +683,39 @@ wsa883x_0221: wsa883x@02170221 {
 	qcom,cdc-static-supplies = "cdc-vdd-1p8";
 };
 
-Haptics Soundwire slave device as child of Soundwire master in Bolero codec
+
+WSA884x Soundwire slave device as child of Soundwire master in LPASS codec
+
+Required properties:
+ - compatible = "qcom,wsa884x";
+ - reg: Specifies the WSA884x soundwire slave unique device address
+ - qcom,spkr-sd-n-gpio: speaker reset gpio
+ - sound-name-prefix: WSA Codec Name Prefix
+
+Optional properties:
+ - lpass-cdc-handle: phandle to lpass-cdc codec
+ - cdc-vdd-1p8-supply: phandle of VDD 1.8V supply's regulator device tree node.
+ - qcom,cdc-vdd-1p8-voltage: VDD 1.8V supply's voltage level min and max in mV.
+ - qcom,cdc-vdd-1p8-current: VDD 1.8V supply's max current in mA.
+ - qcom,cdc-static-supplies: List of supplies to be enabled prior to codec
+			     hardware probe.  Supplies in this list will be
+			     stay enabled.
+
+Example:
+wsa884x_0220: wsa884x@02170220 {
+	compatible = "qcom,wsa884x";
+	reg = <0x4 0x2170220>;
+	qcom,spkr-sd-n-node = <&wsa_spkr_en1>;
+	qcom,lpass-cdc-handle = <&lpass_cdc>;
+
+	cdc-vdd-1p8-supply = <&L15B>;
+	qcom,cdc-vdd-1p8-voltage = <1800000 1800000>;
+	qcom,cdc-vdd-1p8-current = <20000>;
+	qcom,cdc-static-supplies = "cdc-vdd-1p8";
+	sound-name-prefix = "SpkrLeft";
+};
+
+Haptics Soundwire slave device as child of Soundwire master in LPASS codec
 
 Required properties:
  - compatible: "qcom,swr-haptics", or "qcom,pm8350b-swr-haptics".

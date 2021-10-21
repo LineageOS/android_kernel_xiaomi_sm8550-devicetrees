@@ -1,11 +1,9 @@
 
-dtbo-y += waipio-audio.dtbo \
-                 waipio-audio-cdp.dtbo \
-                 waipio-audio-mtp.dtbo \
-                 waipio-audio-qrd.dtbo \
-                 waipio-audio-atp.dtbo \
-                 waipio-audio-rumi.dtbo \
-                 waipio-audio-hdk.dtbo
+dtbo-y += kalama-audio.dtbo \
+                 kalama-audio-cdp.dtbo \
+                 kalama-audio-mtp.dtbo \
+                 kalama-audio-qrd.dtbo \
+                 kalama-audio-rumi.dtbo
 
  always-y    := $(dtb-y) $(dtbo-y)
  subdir-y    := $(dts-dirs)
