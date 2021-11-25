@@ -60,7 +60,7 @@
 		non_secure_pixel_cb {
 			compatible = "qcom,msm-vidc,context-bank";
 			label = "venus_ns_pixel";
-			iommus = <&apps_smmu 0x2187 0x0400>;
+			iommus = <&apps_smmu 0x1947 0x0000>;
 			qcom,iommu-dma-addr-pool = <0x00100000 0xdff00000>;
 			qcom,iommu-faults = "non-fatal";
 			qcom,iommu-pagetable = "LLC";
@@ -71,7 +71,7 @@
 		non_secure_cb {
 			compatible = "qcom,msm-vidc,context-bank";
 			label = "venus_ns";
-			iommus = <&apps_smmu 0x2180 0x0400>;
+			iommus = <&apps_smmu 0x1940 0x0000>;
 			qcom,iommu-dma-addr-pool = <0x25800000 0xba800000>;
 			qcom,iommu-faults = "non-fatal";
 			qcom,iommu-pagetable = "LLC";
@@ -82,7 +82,7 @@
 		secure_non_pixel_cb {
 			compatible = "qcom,msm-vidc,context-bank";
 			label = "venus_sec_non_pixel";
-			iommus = <&apps_smmu 0x2184 0x0400>;
+			iommus = <&apps_smmu 0x1944 0x0000>;
 			qcom,iommu-dma-addr-pool = <0x01000000 0x24800000>;
 			qcom,iommu-faults = "non-fatal";
 			qcom,iommu-pagetable = "LLC";
@@ -94,7 +94,7 @@
 		secure_bitstream_cb {
 			compatible = "qcom,msm-vidc,context-bank";
 			label = "venus_sec_bitstream";
-			iommus = <&apps_smmu 0x2181 0x0404>;
+			iommus = <&apps_smmu 0x1941 0x0004>;
 			qcom,iommu-dma-addr-pool = <0x00500000 0xdfb00000>;
 			qcom,iommu-faults = "non-fatal";
 			qcom,iommu-pagetable = "LLC";
@@ -106,7 +106,7 @@
 		secure_pixel_cb {
 			compatible = "qcom,msm-vidc,context-bank";
 			label = "venus_sec_pixel";
-			iommus = <&apps_smmu 0x2183 0x0400>;
+			iommus = <&apps_smmu 0x1943 0x0000>;
 			qcom,iommu-dma-addr-pool = <0x00500000 0xdfb00000>;
 			qcom,iommu-faults = "non-fatal";
 			qcom,iommu-pagetable = "LLC";
