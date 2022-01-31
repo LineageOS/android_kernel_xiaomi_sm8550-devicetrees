@@ -170,9 +170,13 @@
 		compatible = "qcom,lpass-cdc-wsa-macro";
 		reg = <0x6B00000 0x0>;
 		qcom,wsa-swr-gpios = <&wsa_swr_gpios>;
+		qcom,wsa-bat-cfgs= <1>, <1>;
+		qcom,wsa-rloads= <2>, <2>;
+		qcom,wsa-system-gains= <0 9>, <0 9>;
 		qcom,wsa-bcl-pmic-params = /bits/ 8 <0x00 0x03 0x48>;
 		qcom,default-clk-id = <WSA_TX_CORE_CLK>;
 		qcom,thermal-max-state = <11>;
+		qcom,noise-gate-mode = <0>;
 		#cooling-cells = <2>;
 		swr0: wsa_swr_master {
 			compatible = "qcom,swr-mstr";
@@ -203,6 +207,7 @@
 				reg = <0x4 0x2170220>;
 				qcom,spkr-sd-n-node = <&wsa_spkr_en1>;
 				qcom,lpass-cdc-handle = <&lpass_cdc>;
+				qcom,wsa-macro-handle = <&wsa_macro>;
 
 				cdc-vdd-1p8-supply = <&L15B>;
 				qcom,cdc-vdd-1p8-voltage = <1800000 1800000>;
@@ -216,6 +221,7 @@
 				reg = <0x4 0x2170221>;
 				qcom,spkr-sd-n-node = <&wsa_spkr_en2>;
 				qcom,lpass-cdc-handle = <&lpass_cdc>;
+				qcom,wsa-macro-handle = <&wsa_macro>;
 
 				cdc-vdd-1p8-supply = <&L15B>;
 				qcom,cdc-vdd-1p8-voltage = <1800000 1800000>;
@@ -230,9 +236,13 @@
 		compatible = "qcom,lpass-cdc-wsa2-macro";
 		reg = <0x6AA0000 0x0>;
 		qcom,wsa2-swr-gpios = <&wsa2_swr_gpios>;
+		qcom,wsa-bat-cfgs= <1>, <1>;
+		qcom,wsa-rloads= <2>, <2>;
+		qcom,wsa-system-gains= <0 9>, <0 9>;
 		qcom,wsa2-bcl-pmic-params = /bits/ 8 <0x00 0x03 0x48>;
 		qcom,default-clk-id = <WSA2_TX_CORE_CLK>;
 		qcom,thermal-max-state = <11>;
+		qcom,noise-gate-mode = <0>;
 		#cooling-cells = <2>;
 		status = "disabled";
 		swr3: wsa2_swr_master {
@@ -264,6 +274,7 @@
 				reg = <0x4 0x2170220>;
 				qcom,spkr-sd-n-node = <&wsa2_spkr_en1>;
 				qcom,lpass-cdc-handle = <&lpass_cdc>;
+				qcom,wsa-macro-handle = <&wsa2_macro>;
 
 				cdc-vdd-1p8-supply = <&L15B>;
 				qcom,cdc-vdd-1p8-voltage = <1800000 1800000>;
@@ -277,6 +288,7 @@
 				reg = <0x4 0x2170221>;
 				qcom,spkr-sd-n-node = <&wsa2_spkr_en2>;
 				qcom,lpass-cdc-handle = <&lpass_cdc>;
+				qcom,wsa-macro-handle = <&wsa2_macro>;
 
 				cdc-vdd-1p8-supply = <&L15B>;
 				qcom,cdc-vdd-1p8-voltage = <1800000 1800000>;
