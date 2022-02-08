@@ -155,7 +155,7 @@
 			qcom,swr-clock-stop-mode0 = <1>;
 			swr_haptics: swr_haptics@f0170220 {
 				compatible = "qcom,pm8350b-swr-haptics";
-				reg = <0x01 0xf0170220>;
+				reg = <0x02 0xf0170220>;
 				qcom,rx_swr_ch_map = <0 0x01 0x01 0 PCM_OUT1>;
 			};
 
@@ -205,7 +205,7 @@
 			wsa884x_0220: wsa884x@02170220 {
 				compatible = "qcom,wsa884x";
 				reg = <0x4 0x2170220>;
-				qcom,spkr-sd-n-node = <&wsa_spkr_en1>;
+				qcom,spkr-sd-n-node = <&wsa_spkr_en02>;
 				qcom,lpass-cdc-handle = <&lpass_cdc>;
 				qcom,wsa-macro-handle = <&wsa_macro>;
 
@@ -219,7 +219,7 @@
 			wsa884x_0221: wsa884x@02170221 {
 				compatible = "qcom,wsa884x";
 				reg = <0x4 0x2170221>;
-				qcom,spkr-sd-n-node = <&wsa_spkr_en2>;
+				qcom,spkr-sd-n-node = <&wsa_spkr_en13>;
 				qcom,lpass-cdc-handle = <&lpass_cdc>;
 				qcom,wsa-macro-handle = <&wsa_macro>;
 
@@ -272,7 +272,7 @@
 			wsa884x_2_0220: wsa884x@02170220 {
 				compatible = "qcom,wsa884x_2";
 				reg = <0x4 0x2170220>;
-				qcom,spkr-sd-n-node = <&wsa2_spkr_en1>;
+				qcom,spkr-sd-n-node = <&wsa2_spkr_en02>;
 				qcom,lpass-cdc-handle = <&lpass_cdc>;
 				qcom,wsa-macro-handle = <&wsa2_macro>;
 
@@ -286,7 +286,7 @@
 			wsa884x_2_0221: wsa884x@02170221 {
 				compatible = "qcom,wsa884x_2";
 				reg = <0x4 0x2170221>;
-				qcom,spkr-sd-n-node = <&wsa2_spkr_en2>;
+				qcom,spkr-sd-n-node = <&wsa2_spkr_en13>;
 				qcom,lpass-cdc-handle = <&lpass_cdc>;
 				qcom,wsa-macro-handle = <&wsa2_macro>;
 
@@ -541,33 +541,20 @@
 };
 
 &soc {
-	wsa_spkr_en1: wsa_spkr_en1_pinctrl {
+	wsa_spkr_en02: wsa_spkr_en1_pinctrl {
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&spkr_02_sd_n_active>;
 		pinctrl-1 = <&spkr_02_sd_n_sleep>;
 	};
 
-	wsa_spkr_en2: wsa_spkr_en2_pinctrl {
+	wsa_spkr_en13: wsa_spkr_en2_pinctrl {
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&spkr_13_sd_n_active>;
 		pinctrl-1 = <&spkr_13_sd_n_sleep>;
 	};
 
-	wsa2_spkr_en1: wsa2_spkr_en1_pinctrl {
-		compatible = "qcom,msm-cdc-pinctrl";
-		pinctrl-names = "aud_active", "aud_sleep";
-		pinctrl-0 = <&spkr_02_sd_n_active>;
-		pinctrl-1 = <&spkr_02_sd_n_sleep>;
-	};
-
-	wsa2_spkr_en2: wsa2_spkr_en2_pinctrl {
-		compatible = "qcom,msm-cdc-pinctrl";
-		pinctrl-names = "aud_active", "aud_sleep";
-		pinctrl-0 = <&spkr_13_sd_n_active>;
-		pinctrl-1 = <&spkr_13_sd_n_sleep>;
-	};
 
 	wcd938x_rst_gpio: msm_cdc_pinctrl@32 {
 		compatible = "qcom,msm-cdc-pinctrl";
