@@ -177,7 +177,7 @@
 		qcom,wsa-bcl-pmic-params = /bits/ 8 <0x00 0x03 0x48>;
 		qcom,default-clk-id = <WSA_TX_CORE_CLK>;
 		qcom,thermal-max-state = <11>;
-		qcom,noise-gate-mode = <0>;
+		qcom,noise-gate-mode = <2>;
 		#cooling-cells = <2>;
 		swr0: wsa_swr_master {
 			compatible = "qcom,swr-mstr";
@@ -243,7 +243,7 @@
 		qcom,wsa2-bcl-pmic-params = /bits/ 8 <0x00 0x03 0x48>;
 		qcom,default-clk-id = <WSA2_TX_CORE_CLK>;
 		qcom,thermal-max-state = <11>;
-		qcom,noise-gate-mode = <0>;
+		qcom,noise-gate-mode = <2>;
 		#cooling-cells = <2>;
 		status = "disabled";
 		swr3: wsa2_swr_master {
