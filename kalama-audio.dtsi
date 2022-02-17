@@ -143,6 +143,7 @@
 
 		clock-names = "lpass_audio_hw_vote";
 		clocks = <&lpass_audio_hw_vote 0>;
+		fsa4480-i2c-handle = <&fsa4480>;
 	};
 };
 
