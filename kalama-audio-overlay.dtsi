@@ -450,7 +450,6 @@
 	};
 
 	fm_i2s1_gpios: fm_i2s1_pinctrl {
-		status= "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&i2s1_sck_active &i2s1_ws_active
