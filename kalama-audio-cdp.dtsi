@@ -111,6 +111,6 @@
 			"wsa-codec1", "wsa-codec2";
 	qcom,wsa-max-devs = <2>;
 
-	qcom,tert-mi2s-gpios = <&fm_i2s1_gpios>;
+	qcom,sec-mi2s-gpios = <&fm_i2s1_gpios>;
 };
 

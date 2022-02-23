@@ -5,5 +5,5 @@
 };
 
 &kalama_snd {
-	qcom,tert-mi2s-gpios = <&fm_i2s1_gpios>;
+	qcom,sec-mi2s-gpios = <&fm_i2s1_gpios>;
 };
