@@ -1984,7 +1984,7 @@
 		spkr_02_sd_n_sleep: spkr_02_sd_n_sleep {
 			mux {
 				pins = "gpio17";
-				function = "func0";
+				function = "gpio";
 			};
 
 			config {
@@ -1998,7 +1998,7 @@
 		spkr_02_sd_n_active: spkr_02_sd_n_active {
 			mux {
 				pins = "gpio17";
-				function = "func0";
+				function = "gpio";
 			};
 
 			config {
@@ -2014,7 +2014,7 @@
 		spkr_13_sd_n_sleep: spkr_13_sd_n_sleep {
 			mux {
 				pins = "gpio18";
-				function = "func0";
+				function = "gpio";
 			};
 
 			config {
@@ -2028,7 +2028,7 @@
 		spkr_13_sd_n_active: spkr_13_sd_n_active {
 			mux {
 				pins = "gpio18";
-				function = "func0";
+				function = "gpio";
 			};
 
 			config {
