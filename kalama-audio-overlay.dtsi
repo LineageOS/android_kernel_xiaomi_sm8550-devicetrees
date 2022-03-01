@@ -210,7 +210,11 @@
 				qcom,spkr-sd-n-node = <&wsa_spkr_en02>;
 				qcom,lpass-cdc-handle = <&lpass_cdc>;
 				qcom,wsa-macro-handle = <&wsa_macro>;
-
+				qcom,swr-wsa-port-params =
+					<OFFSET1_VAL1 LANE0>, <OFFSET1_VAL3 LANE0>, <OFFSET1_VAL5 LANE0>, <OFFSET1_VAL0 LANE0>, <OFFSET1_VAL6 LANE0>, <OFFSET1_VAL0 LANE0>,
+					<OFFSET1_VAL1 LANE0>, <OFFSET1_VAL3 LANE0>, <OFFSET1_VAL5 LANE0>, <OFFSET1_VAL0 LANE0>, <OFFSET1_VAL6 LANE0>, <OFFSET1_VAL0 LANE0>,
+					<OFFSET1_VAL1 LANE0>, <OFFSET1_VAL3 LANE0>, <OFFSET1_VAL5 LANE0>, <OFFSET1_VAL0 LANE0>, <OFFSET1_VAL6 LANE0>, <OFFSET1_VAL0 LANE0>,
+					<OFFSET1_VAL1 LANE0>, <OFFSET1_VAL3 LANE0>, <OFFSET1_VAL5 LANE0>, <OFFSET1_VAL0 LANE0>, <OFFSET1_VAL6 LANE0>, <OFFSET1_VAL0 LANE0>;
 				cdc-vdd-1p8-supply = <&L15B>;
 				qcom,cdc-vdd-1p8-voltage = <1800000 1800000>;
 				qcom,cdc-vdd-1p8-current = <20000>;
@@ -224,7 +228,11 @@
 				qcom,spkr-sd-n-node = <&wsa_spkr_en13>;
 				qcom,lpass-cdc-handle = <&lpass_cdc>;
 				qcom,wsa-macro-handle = <&wsa_macro>;
-
+				qcom,swr-wsa-port-params =
+					<OFFSET1_VAL2 LANE0>, <OFFSET1_VAL4 LANE0>, <OFFSET1_VAL21 LANE0>, <OFFSET1_VAL9 LANE0>, <OFFSET1_VAL13 LANE0>, <OFFSET1_VAL25 LANE0>,
+					<OFFSET1_VAL2 LANE0>, <OFFSET1_VAL4 LANE0>, <OFFSET1_VAL21 LANE0>, <OFFSET1_VAL9 LANE0>, <OFFSET1_VAL13 LANE0>, <OFFSET1_VAL25 LANE0>,
+					<OFFSET1_VAL2 LANE0>, <OFFSET1_VAL4 LANE0>, <OFFSET1_VAL21 LANE0>, <OFFSET1_VAL9 LANE0>, <OFFSET1_VAL13 LANE0>, <OFFSET1_VAL25 LANE0>,
+					<OFFSET1_VAL2 LANE0>, <OFFSET1_VAL4 LANE0>, <OFFSET1_VAL21 LANE0>, <OFFSET1_VAL9 LANE0>, <OFFSET1_VAL13 LANE0>, <OFFSET1_VAL25 LANE0>;
 				cdc-vdd-1p8-supply = <&L15B>;
 				qcom,cdc-vdd-1p8-voltage = <1800000 1800000>;
 				qcom,cdc-vdd-1p8-current = <20000>;
