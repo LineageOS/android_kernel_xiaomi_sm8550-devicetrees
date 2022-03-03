@@ -32,8 +32,8 @@
 			"core_clk", "vcodec_clk", "video_cc_mvs0_clk_src";
 		/* Mask: Bit0: Clock Scaling, Bit1: Mem Retention*/
 		qcom,clock-configs = <0x0 0x0 0x0 0x1>;
-		qcom,allowed-clock-rates = <239999999 338000000
-			366000000 444000000>;
+		qcom,allowed-clock-rates = <240000000 338000000
+			366000000 444000000 481000000>;
 		resets = <&gcc GCC_VIDEO_AXI0_CLK_ARES>;
 		reset-names = "video_axi_reset";
 
