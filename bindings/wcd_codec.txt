@@ -69,6 +69,7 @@ Optional properties:
  - qcom,disable-afe-wakeup-event-listener : If enabled wakeup event listener
    will not be called from VA macro.
  - qcom,wcd-dmic-enabled: indicate if wcd dmic is enabled.
+ - qcom,use-clk-id: clk ID to be used for VA macro
 
 Example:
 
