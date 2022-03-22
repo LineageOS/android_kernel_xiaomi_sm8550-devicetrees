@@ -1,6 +1,7 @@
 
 ifeq ($(CONFIG_ARCH_KALAMA), y)
 dtbo-y += kalama-mmrm.dtbo
+dtbo-y += kalama-mmrm-test.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_WAIPIO), y)
