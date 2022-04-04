@@ -1,7 +1,17 @@
 
 ifeq ($(CONFIG_ARCH_KALAMA), y)
-dtbo-y += kalama-mmrm.dtbo
-dtbo-y += kalama-mmrm-test.dtbo
+	ifneq ($(CONFIG_ARCH_QTI_VM), y)
+		dtbo-y += kalama-mmrm.dtbo
+		dtbo-y += kalama-mmrm-test.dtbo
+		ifeq ($(CONFIG_MSM_MMRM_VM),y)
+		    dtbo-y += kalama-mmrm-vm-be.dtbo
+		endif
+	else
+		ifeq ($(CONFIG_MSM_MMRM_VM),y)
+		    dtbo-y += kalama-mmrm-vm-fe.dtbo
+		    dtbo-y += kalama-mmrm-vm-fe-test.dtbo
+		endif
+	endif
 endif
 
 ifeq ($(CONFIG_ARCH_WAIPIO), y)
