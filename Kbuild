@@ -8,6 +8,10 @@ dtbo-y += kalama-vidc.dtbo
 dtbo-y += kalama-vidc-v2.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_ANORAK), y)
+dtbo-y += anorak-vidc.dtbo
+endif
+
 always-y    := $(dtb-y) $(dtbo-y)
 subdir-y    := $(dts-dirs)
 clean-files    := *.dtb *.dtbo
