@@ -51,7 +51,7 @@
 		compatible = "qcom,msm-audio-ion";
 		qcom,smmu-version = <2>;
 		qcom,smmu-enabled;
-		iommus = <&apps_smmu 0x1001 0x0080>;
+		iommus = <&apps_smmu 0x1001 0x0080>, <&apps_smmu 0x1061 0x0>;
 		qcom,iommu-dma-addr-pool = <0x10000000 0x10000000>;
 		qcom,smmu-sid-mask = /bits/ 64 <0xf>;
 		dma-coherent;
