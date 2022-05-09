@@ -5,6 +5,7 @@ endif
 
 ifeq ($(CONFIG_ARCH_KALAMA), y)
 dtbo-y += kalama-vidc.dtbo
+dtbo-y += kalama-vidc-v2.dtbo
 endif
 
 always-y    := $(dtb-y) $(dtbo-y)
