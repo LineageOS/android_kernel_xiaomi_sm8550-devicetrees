@@ -3,6 +3,9 @@
 		compatible = "qcom,msm-mmrm", "qcom,kalama-mmrm";
 		status = "okay";
 
+		/* MMRM clock threshold */
+		mmrm-peak-threshold = <10000>;
+
 		/* MM Rail info */
 		mm-rail-corners = "lowsvs", "svs", "svsl1", "nom", "turbo";
 		mm-rail-fact-volt = <37484 41157 44827 47710 52429>;
