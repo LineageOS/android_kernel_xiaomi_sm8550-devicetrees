@@ -148,7 +148,7 @@
 				<1 HPH_R 0x2>, <2 CLSH 0x3>,
 				<3 COMP_L 0x1>, <3 COMP_R 0x2>,
 				<4 LO 0x1>, <5 DSD_L 0x1>,
-				<5 DSD_R 0x2>, <6 PCM_OUT1 0x03>,
+				<5 DSD_R 0x2>, <6 PCM_OUT1 0x01>,
 				<7 GPPO 0x03>, <8 HAPT 0x03>,
 				<9 HIFI 0x03>, <10 HPTH 0x03>,
 				<11 CMPT 0x03>, <12 IPCM 0x03>;
@@ -545,16 +545,13 @@
 	};
 };
 
-&va_cdc_dma_0_tx {
-	qcom,msm-dai-is-island-supported = <1>;
-};
-
 &soc {
 	wsa_spkr_en02: wsa_spkr_en1_pinctrl {
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&spkr_02_sd_n_active>;
 		pinctrl-1 = <&spkr_02_sd_n_sleep>;
+		qcom,lpi-gpios;
 	};
 
 	wsa_spkr_en13: wsa_spkr_en2_pinctrl {
@@ -562,6 +559,7 @@
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&spkr_13_sd_n_active>;
 		pinctrl-1 = <&spkr_13_sd_n_sleep>;
+		qcom,lpi-gpios;
 	};
 
 
