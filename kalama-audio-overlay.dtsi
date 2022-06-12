@@ -18,11 +18,12 @@
 	qcom,va_mclk_mode_muxsel = <0x06E28000>;
 	clock-names = "tx_core_clk", "rx_core_clk", "wsa_core_clk",
 		"wsa2_core_clk", "rx_tx_core_clk",
-		"wsa_tx_core_clk", "wsa2_tx_core_clk";
+		"wsa_tx_core_clk", "wsa2_tx_core_clk", "va_core_clk";
 	clocks = <&clock_audio_tx_1 0>, <&clock_audio_rx_1 0>,
 		<&clock_audio_wsa_1 0>,
 		<&clock_audio_wsa_2 0>, <&clock_audio_rx_tx 0>,
-		<&clock_audio_wsa_tx 0>, <&clock_audio_wsa2_tx 0>;
+		<&clock_audio_wsa_tx 0>, <&clock_audio_wsa2_tx 0>,
+		<&clock_audio_va_1 0>;
 	};
 
 	va_macro: va-macro@6D44000 {
@@ -34,7 +35,7 @@
 		qcom,va-clk-mux-select = <1>;
 		qcom,va-island-mode-muxsel = <0x06E28000>;
 		qcom,default-clk-id = <TX_CORE_CLK>;
-		qcom,use-clk-id = <TX_CORE_CLK>;
+		qcom,use-clk-id = <VA_CORE_CLK>;
 		qcom,is-used-swr-gpio = <1>;
 		qcom,va-swr-gpios = <&va_swr_gpios>;
 		swr2: va_swr_master {
@@ -568,6 +569,14 @@
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&wcd938x_reset_active>;
 		pinctrl-1 = <&wcd938x_reset_sleep>;
+	};
+
+	clock_audio_va_1: va_core_clk {
+		compatible = "qcom,audio-ref-clk";
+		qcom,codec-ext-clk-src = <AUDIO_LPASS_MCLK>;
+		qcom,codec-lpass-ext-clk-freq = <19200000>;
+		qcom,codec-lpass-clk-id = <0x307>;
+		#clock-cells = <1>;
 	};
 
 	clock_audio_wsa_1: wsa_core_clk {
