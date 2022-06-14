@@ -3,6 +3,8 @@ ifeq ($(CONFIG_ARCH_KALAMA), y)
 	ifneq ($(CONFIG_ARCH_QTI_VM), y)
 		dtbo-y += kalama-mmrm.dtbo
 		dtbo-y += kalama-mmrm-test.dtbo
+		dtbo-y += kalama-mmrm-v2.dtbo
+		dtbo-y += kalama-mmrm-test-v2.dtbo
 		ifeq ($(CONFIG_MSM_MMRM_VM),y)
 		    dtbo-y += kalama-mmrm-vm-be.dtbo
 		endif
