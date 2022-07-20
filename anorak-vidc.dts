@@ -11,5 +11,5 @@
 	model = "Qualcomm Technologies, Inc. Anorak";
 	compatible = "qcom,anorak";
 	qcom,msm-id = <549 0x10000>;
-	qcom,board-id = <0 0>;
+	qcom,board-id = <0 0>, <33 0>, <34 0>, <0x10026 0x0>;
 };
