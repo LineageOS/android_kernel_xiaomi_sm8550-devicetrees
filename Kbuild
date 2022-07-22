@@ -6,8 +6,10 @@ dtbo-y += kalama-audio.dtbo \
                  kalama-audio-mtp.dtbo \
                  kalama-audio-mtp-nfc.dtbo \
                  kalama-audio-qrd.dtbo \
+                 kalama-audio-atp.dtbo \
                  kalama-audio-rcm.dtbo \
-                 kalama-audio-rumi.dtbo
+                 kalama-audio-rumi.dtbo \
+                 kalama-audio-hdk.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_SA8155), y)
