@@ -24,7 +24,7 @@
 };
 
 &kalama_snd {
-	qcom,model = "kalama-hdk-snd-card";
+	qcom,model = "kalama-qrd-snd-card";
 
 	qcom,audio-routing =
 		"AMIC1", "Analog Mic1",
