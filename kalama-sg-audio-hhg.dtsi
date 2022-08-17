@@ -23,6 +23,10 @@
 	};
 };
 
+&wsa_macro {
+	qcom,wsa-bat-cfgs = <2>, <2>;
+};
+
 &kalama_snd {
 	qcom,model = "kalama-grd-snd-card";
 
