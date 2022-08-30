@@ -405,7 +405,7 @@
 		};
 	};
 
-	dai_pri_auxpcm: qcom,msm-pri-auxpcm {
+	dai_pri_auxpcm_rx: qcom,msm-pri-auxpcm_rx {
 		compatible = "qcom,msm-auxpcm-dev";
 		qcom,msm-cpudai-auxpcm-mode = <0>, <0>;
 		qcom,msm-cpudai-auxpcm-sync = <1>, <1>;
@@ -433,7 +433,7 @@
 		qcom,msm-cpudai-afe-clk-ver = <2>;
 	};
 
-	dai_sec_auxpcm: qcom,msm-sec-auxpcm {
+	dai_sec_auxpcm_rx: qcom,msm-sec-auxpcm_rx {
 		compatible = "qcom,msm-auxpcm-dev";
 		qcom,msm-cpudai-auxpcm-mode = <0>, <0>;
 		qcom,msm-cpudai-auxpcm-sync = <1>, <1>;
@@ -443,11 +443,11 @@
 		qcom,msm-cpudai-auxpcm-slot-mapping = <1>, <1>;
 		qcom,msm-cpudai-auxpcm-data = <0>, <0>;
 		qcom,msm-cpudai-auxpcm-pcm-clk-rate = <2048000>, <2048000>;
-		qcom,msm-auxpcm-interface = "secondary";
+		qcom,msm-auxpcm-interface = "secondaryRx";
 		qcom,msm-cpudai-afe-clk-ver = <2>;
 	};
 
-	dai_tert_auxpcm: qcom,msm-tert-auxpcm {
+	dai_sec_auxpcm_tx: qcom,msm-sec-auxpcm_tx {
 		compatible = "qcom,msm-auxpcm-dev";
 		qcom,msm-cpudai-auxpcm-mode = <0>, <0>;
 		qcom,msm-cpudai-auxpcm-sync = <1>, <1>;
@@ -457,11 +457,11 @@
 		qcom,msm-cpudai-auxpcm-slot-mapping = <1>, <1>;
 		qcom,msm-cpudai-auxpcm-data = <0>, <0>;
 		qcom,msm-cpudai-auxpcm-pcm-clk-rate = <2048000>, <2048000>;
-		qcom,msm-auxpcm-interface = "tertiary";
+		qcom,msm-auxpcm-interface = "secondaryTx";
 		qcom,msm-cpudai-afe-clk-ver = <2>;
 	};
 
-	dai_quat_auxpcm: qcom,msm-quat-auxpcm {
+	dai_tert_auxpcm_rx: qcom,msm-tert-auxpcm_rx {
 		compatible = "qcom,msm-auxpcm-dev";
 		qcom,msm-cpudai-auxpcm-mode = <0>, <0>;
 		qcom,msm-cpudai-auxpcm-sync = <1>, <1>;
@@ -471,11 +471,11 @@
 		qcom,msm-cpudai-auxpcm-slot-mapping = <1>, <1>;
 		qcom,msm-cpudai-auxpcm-data = <0>, <0>;
 		qcom,msm-cpudai-auxpcm-pcm-clk-rate = <2048000>, <2048000>;
-		qcom,msm-auxpcm-interface = "quaternary";
+		qcom,msm-auxpcm-interface = "tertiaryRx";
 		qcom,msm-cpudai-afe-clk-ver = <2>;
 	};
 
-	dai_quin_auxpcm: qcom,msm-quin-auxpcm {
+	dai_tert_auxpcm_tx: qcom,msm-tert-auxpcm_tx {
 		compatible = "qcom,msm-auxpcm-dev";
 		qcom,msm-cpudai-auxpcm-mode = <0>, <0>;
 		qcom,msm-cpudai-auxpcm-sync = <1>, <1>;
@@ -485,11 +485,11 @@
 		qcom,msm-cpudai-auxpcm-slot-mapping = <1>, <1>;
 		qcom,msm-cpudai-auxpcm-data = <0>, <0>;
 		qcom,msm-cpudai-auxpcm-pcm-clk-rate = <2048000>, <2048000>;
-		qcom,msm-auxpcm-interface = "quinary";
+		qcom,msm-auxpcm-interface = "tertiaryTx";
 		qcom,msm-cpudai-afe-clk-ver = <2>;
 	};
 
-	dai_sen_auxpcm: qcom,msm-sen-auxpcm {
+	dai_quat_auxpcm_rx: qcom,msm-quat-auxpcm_rx {
 		compatible = "qcom,msm-auxpcm-dev";
 		qcom,msm-cpudai-auxpcm-mode = <0>, <0>;
 		qcom,msm-cpudai-auxpcm-sync = <1>, <1>;
@@ -499,7 +499,77 @@
 		qcom,msm-cpudai-auxpcm-slot-mapping = <1>, <1>;
 		qcom,msm-cpudai-auxpcm-data = <0>, <0>;
 		qcom,msm-cpudai-auxpcm-pcm-clk-rate = <2048000>, <2048000>;
-		qcom,msm-auxpcm-interface = "senary";
+		qcom,msm-auxpcm-interface = "quaternaryRx";
+		qcom,msm-cpudai-afe-clk-ver = <2>;
+	};
+
+	dai_quat_auxpcm_tx: qcom,msm-quat-auxpcm_tx {
+		compatible = "qcom,msm-auxpcm-dev";
+		qcom,msm-cpudai-auxpcm-mode = <0>, <0>;
+		qcom,msm-cpudai-auxpcm-sync = <1>, <1>;
+		qcom,msm-cpudai-auxpcm-frame = <5>, <4>;
+		qcom,msm-cpudai-auxpcm-quant = <2>, <2>;
+		qcom,msm-cpudai-auxpcm-num-slots = <1>, <1>;
+		qcom,msm-cpudai-auxpcm-slot-mapping = <1>, <1>;
+		qcom,msm-cpudai-auxpcm-data = <0>, <0>;
+		qcom,msm-cpudai-auxpcm-pcm-clk-rate = <2048000>, <2048000>;
+		qcom,msm-auxpcm-interface = "quaternaryTx";
+		qcom,msm-cpudai-afe-clk-ver = <2>;
+	};
+
+	dai_quin_auxpcm_rx: qcom,msm-quin-auxpcm_rx {
+		compatible = "qcom,msm-auxpcm-dev";
+		qcom,msm-cpudai-auxpcm-mode = <0>, <0>;
+		qcom,msm-cpudai-auxpcm-sync = <1>, <1>;
+		qcom,msm-cpudai-auxpcm-frame = <5>, <4>;
+		qcom,msm-cpudai-auxpcm-quant = <2>, <2>;
+		qcom,msm-cpudai-auxpcm-num-slots = <1>, <1>;
+		qcom,msm-cpudai-auxpcm-slot-mapping = <1>, <1>;
+		qcom,msm-cpudai-auxpcm-data = <0>, <0>;
+		qcom,msm-cpudai-auxpcm-pcm-clk-rate = <2048000>, <2048000>;
+		qcom,msm-auxpcm-interface = "quinaryRx";
+		qcom,msm-cpudai-afe-clk-ver = <2>;
+	};
+
+	dai_quin_auxpcm_tx: qcom,msm-quin-auxpcm_tx {
+		compatible = "qcom,msm-auxpcm-dev";
+		qcom,msm-cpudai-auxpcm-mode = <0>, <0>;
+		qcom,msm-cpudai-auxpcm-sync = <1>, <1>;
+		qcom,msm-cpudai-auxpcm-frame = <5>, <4>;
+		qcom,msm-cpudai-auxpcm-quant = <2>, <2>;
+		qcom,msm-cpudai-auxpcm-num-slots = <1>, <1>;
+		qcom,msm-cpudai-auxpcm-slot-mapping = <1>, <1>;
+		qcom,msm-cpudai-auxpcm-data = <0>, <0>;
+		qcom,msm-cpudai-auxpcm-pcm-clk-rate = <2048000>, <2048000>;
+		qcom,msm-auxpcm-interface = "quinaryTx";
+		qcom,msm-cpudai-afe-clk-ver = <2>;
+	};
+
+	dai_sen_auxpcm_rx: qcom,msm-sen-auxpcm_rx {
+		compatible = "qcom,msm-auxpcm-dev";
+		qcom,msm-cpudai-auxpcm-mode = <0>, <0>;
+		qcom,msm-cpudai-auxpcm-sync = <1>, <1>;
+		qcom,msm-cpudai-auxpcm-frame = <5>, <4>;
+		qcom,msm-cpudai-auxpcm-quant = <2>, <2>;
+		qcom,msm-cpudai-auxpcm-num-slots = <1>, <1>;
+		qcom,msm-cpudai-auxpcm-slot-mapping = <1>, <1>;
+		qcom,msm-cpudai-auxpcm-data = <0>, <0>;
+		qcom,msm-cpudai-auxpcm-pcm-clk-rate = <2048000>, <2048000>;
+		qcom,msm-auxpcm-interface = "senaryRx";
+		qcom,msm-cpudai-afe-clk-ver = <2>;
+	};
+
+	dai_sen_auxpcm_tx: qcom,msm-sen-auxpcm_tx {
+		compatible = "qcom,msm-auxpcm-dev";
+		qcom,msm-cpudai-auxpcm-mode = <0>, <0>;
+		qcom,msm-cpudai-auxpcm-sync = <1>, <1>;
+		qcom,msm-cpudai-auxpcm-frame = <5>, <4>;
+		qcom,msm-cpudai-auxpcm-quant = <2>, <2>;
+		qcom,msm-cpudai-auxpcm-num-slots = <1>, <1>;
+		qcom,msm-cpudai-auxpcm-slot-mapping = <1>, <1>;
+		qcom,msm-cpudai-auxpcm-data = <0>, <0>;
+		qcom,msm-cpudai-auxpcm-pcm-clk-rate = <2048000>, <2048000>;
+		qcom,msm-auxpcm-interface = "senaryTx";
 		qcom,msm-cpudai-afe-clk-ver = <2>;
 	};
 
