@@ -17,6 +17,12 @@ ifeq ($(CONFIG_ARCH_SA8155), y)
 dtbo-y +=  sa8155-audio.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_KHAJE), y)
+dtbo-y += khaje-audio.dtbo \
+		khaje-audio-idp.dtbo \
+		khaje-nowcd.dtbo
+endif
+
  always-y    := $(dtb-y) $(dtbo-y)
  subdir-y    := $(dts-dirs)
  clean-files    := *.dtb *.dtbo
