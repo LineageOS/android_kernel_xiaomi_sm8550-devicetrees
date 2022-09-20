@@ -10,11 +10,17 @@ dtbo-y += kalama-audio.dtbo \
                  kalama-audio-rcm.dtbo \
                  kalama-audio-rumi.dtbo \
                  kalama-audio-hdk.dtbo \
-                 kalama-audio-hhg.dtbo
+                 kalama-sg-audio-hhg.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_SA8155), y)
 dtbo-y +=  sa8155-audio.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_KHAJE), y)
+dtbo-y += khaje-audio.dtbo \
+		khaje-audio-idp.dtbo \
+		khaje-nowcd.dtbo
 endif
 
  always-y    := $(dtb-y) $(dtbo-y)
