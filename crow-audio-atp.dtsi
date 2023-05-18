@@ -1,0 +1,42 @@
+#include "crow-audio-idp.dtsi"
+
+&swr_haptics {
+	status = "disabled";
+};
+
+&swr0 {
+        qcom,swr-num-dev = <2>;
+
+        wsa884x_0220: wsa884x@02170220 {
+                status = "disabled";
+        };
+
+        wsa884x_0221: wsa884x@02170221 {
+                status = "disabled";
+        };
+
+        wsa883x_0221: wsa883x@02170221 {
+                status = "disabled";
+        };
+
+        wsa883x_0222: wsa883x@02170222 {
+                status = "disabled";
+        };
+};
+
+&kalama_snd {
+	asoc-codec  = <&stub_codec>, <&lpass_cdc>;
+	asoc-codec-names = "msm-stub-codec.1", "lpass-cdc";
+};
+
+&wcd937x_codec {
+	status = "disabled";
+};
+
+&wcd937x_tx_slave {
+	status = "disabled";
+};
+
+&wcd937x_rx_slave {
+	status = "disabled";
+};

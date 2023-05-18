@@ -1,0 +1,55 @@
+#include "crow-audio-overlay.dtsi"
+
+&swr0 {
+	qcom,swr-num-dev = <2>;
+
+	wsa884x_0220: wsa884x@02170220 {
+		status = "okay";
+	};
+
+	wsa884x_0221: wsa884x@02170221 {
+		status = "okay";
+	};
+
+	wsa883x_0221: wsa883x@02170221 {
+		status = "disabled";
+	};
+
+	wsa883x_0222: wsa883x@02170222 {
+		status = "disabled";
+	};
+};
+
+&kalama_snd {
+	qcom,model = "crow-idp-wcd9395-dmic-snd-card";
+	wcd939x-i2c-handle = <&wcd_usbss>;
+	qcom,pri-mi2s-gpios = <&fm_i2s0_gpios>;
+};
+
+&wcd937x_codec {
+	status = "disabled";
+};
+
+&wcd937x_tx_slave {
+	status = "disabled";
+};
+
+&wcd937x_rx_slave {
+	status = "disabled";
+};
+
+&wcd939x_codec {
+	status = "okay";
+};
+
+&wcd939x_tx_slave {
+	status = "okay";
+};
+
+&wcd939x_rx_slave {
+	status = "okay";
+};
+
+&fm_i2s0_gpios {
+	status = "ok";
+};
