@@ -6,7 +6,7 @@
 
 &lpass_cdc {
 	qcom,num-macros = <4>;
-	qcom,lpass-cdc-version = <7>;
+	qcom,lpass-cdc-version = <6>;
 	#address-cells = <1>;
 	#size-cells = <1>;
 	lpass-cdc-clk-rsc-mngr {

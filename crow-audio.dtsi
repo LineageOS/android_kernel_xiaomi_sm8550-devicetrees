@@ -136,7 +136,6 @@
 	kalama_snd: sound {
 		compatible = "qcom,kalama-asoc-snd";
 		qcom,mi2s-audio-intf = <1>;
-		qcom,auxpcm-audio-intf = <1>;
 		qcom,wcn-bt = <0>;
 		qcom,ext-disp-audio-rx = <0>;
 		qcom,afe-rxtx-lb = <0>;
