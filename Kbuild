@@ -28,6 +28,16 @@ dtbo-y += khaje-audio.dtbo \
 		khaje-nowcd.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_CROW), y)
+dtbo-y += crow-audio.dtbo \
+                 crow-audio-idp.dtbo \
+                 crow-audio-idp-wcd9395-aatc.dtbo \
+                 crow-audio-idp-wcd9395-dmic.dtbo \
+                 crow-audio-idp-wcd9395-wcd-dmic.dtbo \
+                 crow-audio-qrd.dtbo \
+                 crow-audio-atp.dtbo
+endif
+
  always-y    := $(dtb-y) $(dtbo-y)
  subdir-y    := $(dts-dirs)
  clean-files    := *.dtb *.dtbo
