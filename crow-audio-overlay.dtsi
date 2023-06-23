@@ -494,7 +494,7 @@
 
 &spf_core_platform  {
 	kalama_snd: sound {
-		qcom,model = "crow-idp-snd-card";
+		qcom,model = "crow-idp-wsa883x-snd-card";
 		qcom,msm-mi2s-master = <1>, <1>, <1>, <1>, <1>, <1>;
 		qcom,mi2s-tdm-is-hw-vote-needed = <1>, <0>, <1>, <0>, <0>, <0>;
 		qcom,wcn-bt = <0>;
@@ -512,14 +512,6 @@
 			"AMIC3", "MIC BIAS3",
 			"AMIC4", "Analog Mic4",
 			"AMIC4", "MIC BIAS3",
-			"VA AMIC1", "Analog Mic1",
-			"VA AMIC1", "VA MIC BIAS1",
-			"VA AMIC2", "Analog Mic2",
-			"VA AMIC2", "VA MIC BIAS2",
-			"VA AMIC3", "Analog Mic3",
-			"VA AMIC3", "VA MIC BIAS3",
-			"VA AMIC4", "Analog Mic4",
-			"VA AMIC4", "VA MIC BIAS3",
 			"TX DMIC0", "Digital Mic0",
 			"TX DMIC0", "MIC BIAS3",
 			"TX DMIC1", "Digital Mic1",
@@ -530,6 +522,7 @@
 			"TX DMIC3", "MIC BIAS1",
 			"IN1_HPHL", "HPHL_OUT",
 			"IN2_HPHR", "HPHR_OUT",
+			"IN3_AUX", "AUX_OUT",
 			"WSA SRC0_INP", "SRC0",
 			"WSA_TX DEC0_INP", "TX DEC0 MUX",
 			"WSA_TX DEC1_INP", "TX DEC1 MUX",

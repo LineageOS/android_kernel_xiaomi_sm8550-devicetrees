@@ -25,8 +25,8 @@
 };
 
 &kalama_snd {
-	qcom,model = "crow-qrd-snd-card";
-	qcom,sku-model = "crow-qrd-sku1-snd-card";
+	qcom,model = "crow-qrd-wsa883x-snd-card";
+	qcom,sku-model = "crow-qrd-wsa883x-sku1-snd-card";
 	nvmem-cells = <&adsp_variant>;
 	nvmem-cell-names = "adsp_variant";
 	qcom,audio-routing =
