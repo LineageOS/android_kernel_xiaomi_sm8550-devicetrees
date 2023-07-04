@@ -3,8 +3,10 @@ dtbo-y += kalama-audio.dtbo \
                  kalama-audio-cdp.dtbo \
                  kalama-audio-cdp-nfc.dtbo \
                  kalama-audio-wsa883x-cdp.dtbo \
+                 kalama-audio-cdp-apq.dtbo \
                  kalama-audio-mtp.dtbo \
                  kalama-audio-mtp-nfc.dtbo \
+                 kalama-audio-mtp-apq.dtbo \
                  kalama-audio-qrd.dtbo \
                  kalama-audio-atp.dtbo \
                  kalama-audio-rcm.dtbo \
