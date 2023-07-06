@@ -64,6 +64,7 @@
 	asoc-codec-names = "msm-stub-codec.1", "lpass-cdc",
 			"wcd939x_codec", "wsa-codec1", "wsa-codec2";
 	wcd939x-i2c-handle = <&wcd_usbss>;
+	qcom,ext-disp-audio-rx = <1>;
 	qcom,pri-mi2s-gpios = <&fm_i2s0_gpios>;
 };
 

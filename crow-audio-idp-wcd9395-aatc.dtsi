@@ -116,6 +116,7 @@
 	qcom,msm-mbhc-gnd-swh = <0>;
 	qcom,wcd-disable-legacy-surge;
 	wcd939x-i2c-handle = <&wcd_usbss>;
+	qcom,ext-disp-audio-rx = <1>;
 	qcom,pri-mi2s-gpios = <&fm_i2s0_gpios>;
 };
 
