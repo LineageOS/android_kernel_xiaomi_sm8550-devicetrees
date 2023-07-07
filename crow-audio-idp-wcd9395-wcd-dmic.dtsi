@@ -29,6 +29,8 @@
 		"VA AMIC2", "VA MIC BIAS2",
 		"DMIC0", "Digital Mic0",
 		"DMIC0", "MIC BIAS3",
+		"DMIC1", "Digital Mic1",
+		"DMIC1", "MIC BIAS3",
 		"DMIC2", "Digital Mic2",
 		"DMIC2", "MIC BIAS1",
 		"DMIC3", "Digital Mic3",
