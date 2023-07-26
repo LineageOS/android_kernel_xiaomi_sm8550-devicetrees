@@ -482,10 +482,6 @@
 
 };
 
-&swr_haptics {
-	status = "disabled";
-};
-
 &spf_core_platform  {
 	kalama_snd: sound {
 		qcom,model = "crow-idp-wsa883x-snd-card";
@@ -496,7 +492,6 @@
 		qcom,tdm-max-slots = <8>;
 		qcom,tdm-clk-attribute = <0x1>, <0x1>, <0x1>, <0x1>, <0x1>, <0x1>;
 		qcom,mi2s-clk-attribute = <0x1>, <0x1>, <0x1>, <0x1>, <0x1>, <0x1>;
-		swr-haptics-unsupported;
 		qcom,audio-routing =
 			"AMIC1", "Analog Mic1",
 			"AMIC1", "MIC BIAS1",
