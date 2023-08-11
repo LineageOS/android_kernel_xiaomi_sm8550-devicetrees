@@ -24,14 +24,6 @@
 	};
 };
 
-&wsa_macro {
-	qcom,wsa-bat-cfgs = <2>, <2>;
-};
-
-&wsa2_macro {
-	qcom,wsa-bat-cfgs = <2>, <2>;
-};
-
 &wcd939x_codec {
 	qcom,cdc-vdd-px-lpm-supported = <1>;
 	/* 0 for no crosstalk, 1 for digital crosstalk, and 2 for analog crosstalk */
