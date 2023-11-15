@@ -33,12 +33,12 @@
 		nfc_enable_active: nfc_enable_active {
 			mux {
 				/* Enable and Firmware gpios */
-				pins = "gpio161", "gpio12";
+				pins = "gpio30", "gpio12";
 				function = "gpio";
 			};
 
 			config {
-				pins = "gpio161", "gpio12";
+				pins = "gpio30", "gpio12";
 				drive-strength = <2>; /* 2 MA */
 				bias-disable;
 			};
@@ -46,12 +46,12 @@
 
 		nfc_enable_suspend: nfc_enable_suspend {
 			mux {
-				pins = "gpio161", "gpio12";
+				pins = "gpio30", "gpio12";
 				function = "gpio";
 			};
 
 			config {
-				pins = "gpio161", "gpio12";
+				pins = "gpio30", "gpio12";
 				drive-strength = <2>; /* 2 MA */
 				bias-disable;
 			};

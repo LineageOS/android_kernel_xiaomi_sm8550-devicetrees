@@ -6,10 +6,10 @@
 	#size-cells = <0>;
 	nq@28 {
 		compatible = "qcom,sn-nci";
-		reg = <0x29>;
+		reg = <0x28>;
 		qcom,sn-irq = <&tlmm 55 0x00>;
-		qcom,sn-ven = <&tlmm 161 0x00>;
-		qcom,sn-firm = <&tlmm 159 0x00>;
+		qcom,sn-ven = <&tlmm 30 0x00>;
+		qcom,sn-firm = <&tlmm 12 0x00>;
 		qcom,sn-clkreq = <&tlmm 31 0x00>;
 		qcom,sn-szone = "enable";
 		qcom,sn-vdd-1p8-supply = <&L15B>;
@@ -24,12 +24,3 @@
 	};
 };
 
-&qupv3_se1_spi {
-	status = "ok";
-	p61@0 {
-		compatible = "nxp,p61";
-		reg = <0x0>;
-		spi-max-frequency = <20000000>;
-		nxp,nfcc = "1-0029";
-	};
-};
