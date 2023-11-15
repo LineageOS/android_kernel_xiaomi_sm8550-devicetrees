@@ -29,20 +29,6 @@
 				bias-pull-down;
 			};
 		};
-
-		wifi_ant_switch: wifi_ant_switch {
-			mux {
-				pins = "gpio160";
-				function = "gpio";
-			};
-
-			config {
-				pins = "gpio160";
-				bias-pull-up;
-				output-high;
-			};
-		};
-
 	};
 };
 
@@ -69,11 +55,9 @@
 			wlan-en-gpio = <&tlmm 80 0>;
 			qcom,bt-en-gpio = <&tlmm 81 0>;
 			qcom,sw-ctrl-gpio = <&tlmm 82 0>;
-			pinctrl-names = "wlan_en_active", "wlan_en_sleep", "wifi_ant_gpio";
+			pinctrl-names = "wlan_en_active", "wlan_en_sleep";
 			pinctrl-0 = <&cnss_wlan_en_active>;
 			pinctrl-1 = <&cnss_wlan_en_sleep>;
-			pinctrl-2 = <&wifi_ant_switch>;
-			wlan-asus_ant_160 = <&tlmm 160 0>;
 			qcom,wlan;
 			qcom,wlan-rc-num = <1>;
 			qcom,wlan-ramdump-dynamic = <0x420000>;
@@ -160,11 +144,9 @@
 			wlan-en-gpio = <&tlmm 80 0>;
 			qcom,bt-en-gpio = <&tlmm 81 0>;
 			qcom,sw-ctrl-gpio = <&tlmm 82 0>;
-			pinctrl-names = "wlan_en_active", "wlan_en_sleep", "wifi_ant_gpio";
+			pinctrl-names = "wlan_en_active", "wlan_en_sleep";
 			pinctrl-0 = <&cnss_wlan_en_active>;
 			pinctrl-1 = <&cnss_wlan_en_sleep>;
-			pinctrl-2 = <&wifi_ant_switch>;
-			wlan-asus_ant_160 = <&tlmm 160 0>;
 			qcom,wlan;
 			qcom,wlan-rc-num = <0>;
 			qcom,wlan-ramdump-dynamic = <0x780000>;
