@@ -1,5 +1,6 @@
 &msm_gpu {
 	qcom,initial-pwrlevel = <13>;
+	qcom,initial-min-pwrlevel = <13>;
 
 	/* Power levels */
 	qcom,gpu-pwrlevels {
@@ -174,6 +175,16 @@
 			qcom,bus-max = <3>;
 
 			qcom,acd-level = <0xc02f5ffd>;
+		};
+
+		qcom,gpu-pwrlevel@14 {
+			reg = <14>;
+			qcom,gpu-freq = <124800000>;
+			qcom,level = <RPMH_REGULATOR_LEVEL_LOW_SVS_D2>;
+
+			qcom,bus-freq = <1>;
+			qcom,bus-min = <1>;
+			qcom,bus-max = <1>;
 		};
 	};
 };
