@@ -1,0 +1,91 @@
+/*for socrates pinctrl */
+&tlmm {
+	nfc {
+		nfc_int_active: nfc_int_active {
+			/* active state */
+			mux {
+				/* NFC Read Interrupt */
+				pins = "gpio55";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio55";
+				drive-strength = <2>; /* 2 MA */
+				bias-pull-down;
+			};
+		};
+
+		nfc_int_suspend: nfc_int_suspend {
+			/* sleep state */
+			mux {
+				/* NFC Read Interrupt */
+				pins = "gpio55";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio55";
+				drive-strength = <2>; /* 2 MA */
+				bias-pull-down;
+			};
+		};
+
+		nfc_enable_active: nfc_enable_active {
+			mux {
+				/* Enable, Firmware and Clock request gpios */
+				pins = "gpio30", "gpio12", "gpio31";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio30", "gpio12", "gpio31";
+				drive-strength = <2>; /* 2 MA */
+				bias-disable;
+			};
+		};
+
+		nfc_enable_suspend: nfc_enable_suspend {
+			mux {
+				pins = "gpio30", "gpio12", "gpio31";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio30", "gpio12", "gpio31";
+				drive-strength = <2>; /* 2 MA */
+				bias-disable;
+			};
+		};
+	};
+
+	sbu_uart_en_ctrl {
+		sbu_uart_en_active: uart_audio_en_active {
+			config {
+				bias-disable;
+				drive-strength = <2>; /* 2 MA */
+				output-high;
+				pins = "gpio7";
+			};
+
+			mux {
+				function = "gpio";
+				pins = "gpio7";
+			};
+		};
+
+		sbu_uart_en_idle: uart_audio_en_idle {
+			config {
+				bias-pull-down;
+				drive-strength = <2>; /* 2 MA */
+				output-low;
+				pins = "gpio7";
+			};
+
+			mux {
+				function = "gpio";
+				pins = "gpio7";
+			};
+		};
+	};
+};
