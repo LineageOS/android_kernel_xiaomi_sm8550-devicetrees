@@ -51,6 +51,32 @@
 				bias-pull-down;         /* PULL DOWN */
 			};
 		};
+
+		sde_esd_active: sde_esd_active {
+			mux {
+				pins = "gpio49";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio49";
+				drive-strength = <8>;   /* 8 mA */
+				bias-pull-up;   /* PULL UP */
+			};
+		};
+
+		sde_esd_suspend: sde_esd_suspend {
+			mux {
+				pins = "gpio49";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio49";
+				drive-strength = <2>;   /* 8 mA */
+				bias-pull-down;         /* PULL DOWN */
+			};
+		};
 	};
 
 	pmx_sde_te: pmx_sde_te {
