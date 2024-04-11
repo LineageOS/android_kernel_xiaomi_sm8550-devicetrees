@@ -5,6 +5,7 @@
 #include "dsi-panel-sharp-qsync-wqhd-cmd.dtsi"
 #include "dsi-panel-sharp-qsync-wqhd-video.dtsi"
 #include "dsi-panel-sharp-1080p-cmd.dtsi"
+#include "dsi-panel-sec-sim-video.dtsi"
 #include "dsi-panel-nt35597-truly-dualmipi-wqxga-cmd.dtsi"
 #include "dsi-panel-nt35597-truly-dualmipi-wqxga-video.dtsi"
 #include "dsi-panel-nt35695b-truly-fhd-cmd.dtsi"
@@ -688,6 +689,19 @@
 				01 01 02 04 00 06 06];
 			qcom,display-topology = <1 0 1>,
 						<2 0 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_sec_sim_vid {
+	qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			/* 60hz */
+			qcom,mdss-dsi-panel-phy-timings = [00 23 09 09 1A 24 09
+				09 09 02 04 00 1D 0E];
+			qcom,display-topology = <1 0 1>;
 			qcom,default-topology-index = <0>;
 		};
 	};

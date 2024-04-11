@@ -1,0 +1,147 @@
+#include "kalama-sde-display.dtsi"
+#include "dsi-panel-m11-42-02-0a-dsc-cmd.dtsi"
+
+&soc {
+	dsi_panel_pwr_supply_M11: dsi_panel_pwr_supply_M11 {
+		qcom,panel-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "vddio";
+			qcom,supply-min-voltage = <1800000>;
+			qcom,supply-max-voltage = <1800000>;
+			qcom,supply-enable-load = <300000>;
+			qcom,supply-disable-load = <80>;
+			qcom,supply-post-on-sleep = <1>;
+			qcom,supply-post-off-sleep = <0>;
+			qcom,supply-pre-off-sleep = <25>;
+		};
+		qcom,panel-supply-entry@1 {
+			reg = <1>;
+			qcom,supply-name = "vddd";
+			qcom,supply-min-voltage = <1070000>;
+			qcom,supply-max-voltage = <1070000>;
+			qcom,supply-enable-load = <300000>;
+			qcom,supply-disable-load = <0>;
+			qcom,supply-post-on-sleep = <1>;
+			qcom,supply-post-off-sleep = <0>;
+			qcom,supply-pre-off-sleep = <15>;
+        };
+		qcom,panel-supply-entry@2 {
+			reg = <2>;
+			qcom,supply-name = "vci";
+			qcom,supply-min-voltage = <3000000>;
+			qcom,supply-max-voltage = <3000000>;
+			qcom,supply-enable-load = <300000>;
+			qcom,supply-disable-load = <0>;
+			qcom,supply-post-on-sleep = <10>;
+			qcom,supply-post-off-sleep = <0>;
+		};
+	};
+};
+
+&display_panel_vddd {
+	regulator-min-microvolt = <1070000>;
+	regulator-max-microvolt = <1070000>;
+};
+
+&dsi_m11_42_02_0a_dsc_cmd {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_M11>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <4>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,mdss-brightness-max-level = <4095>;
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,platform-reset-gpio = <&tlmm 133 0>;
+	qcom,mdss-dsi-panel-vsync-delay;
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,mdss-dsi-clk-strength = <0xFF>;
+	qcom,mdss-dsi-display-timings {
+		/* 60Hz */
+		timing@0{
+			qcom,mdss-dsi-panel-phy-timings = [00 27 0A 0A 1B 25 0A
+				0B 0A 02 04 00 20 0F];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+		};
+		/* 120Hz */
+		timing@1{
+			qcom,mdss-dsi-panel-phy-timings = [00 27 0A 0A 1B 25 0A
+				0B 0A 02 04 00 20 0F];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+		};
+		/* 90Hz */
+		timing@2{
+			qcom,mdss-dsi-panel-phy-timings = [00 27 0A 0A 1B 25 0A
+				0B 0A 02 04 00 20 0F];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_r66451_amoled_video {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_M11>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <1>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,mdss-brightness-max-level = <8191>;
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,platform-reset-gpio = <&tlmm 133 0>;
+	/delete-property/qcom,esd-check-enabled;
+};
+
+&apps_rsc_drv2 {
+	rpmh-regulator-ldob4 {
+		compatible = "qcom,rpmh-vrm-regulator";
+		qcom,resource-name = "ldob4";
+		qcom,regulator-type = "pmic5-ldo";
+		qcom,supported-modes =
+			<RPMH_REGULATOR_MODE_LPM
+			 RPMH_REGULATOR_MODE_HPM>;
+		qcom,mode-threshold-currents = <0 10000>;
+		proxy-supply = <&L4B>;
+
+		L4B: pm_humu_l4: regulator-pm-humu-l4 {
+			regulator-name = "pm_humu_l4";
+			qcom,set = <RPMH_REGULATOR_SET_ALL>;
+			regulator-min-microvolt = <1800000>;
+			regulator-max-microvolt = <1800000>;
+			qcom,init-voltage = <1800000>;
+			qcom,init-mode = <RPMH_REGULATOR_MODE_HPM>;
+			qcom,proxy-consumer-enable;
+		};
+	};
+};
+
+&sde_dsi {
+	qcom,dsi-default-panel = <&dsi_r66451_amoled_video>;
+	vci-supply = <&L13B>;
+	vddio-supply = <&L4B>;
+	vddd-supply = <&display_panel_vddd>;
+};
+
+&sde_dsi1 {
+	status = "disabled";
+};
+
+&sde_dp {
+	status = "disabled";
+};
+
+&mdss_mdp {
+        connectors = <&sde_dsi &smmu_sde_unsec &sde_wb1 &sde_wb2 &sde_rscc>;
+};
+
+&qupv3_se4_spi {
+	goodix@0 {
+		panel = <&dsi_m11_42_02_0a_dsc_cmd
+			&dsi_r66451_amoled_video>;
+	};
+};
+
+&soc {
+	thermal_screen: thermal-screen {
+		panel = <&dsi_m11_42_02_0a_dsc_cmd
+			&dsi_r66451_amoled_video>;
+        };
+};

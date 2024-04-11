@@ -41,8 +41,37 @@
 		pinctrl-0 = <&display_panel_avdd_default>;
 	};
 
+	display_panel_vci: display_panel_vci {
+		compatible = "regulator-fixed";
+		regulator-name = "display_panel_vci";
+		regulator-min-microvolt = <3000000>;
+		regulator-max-microvolt = <3000000>;
+		gpio = <&tlmm 127 0>;
+		enable-active-high;
+		regulator-boot-on;
+	};
+	display_panel_vddio: display_panel_vddio {
+		compatible = "regulator-fixed";
+		regulator-name = "display_panel_vddio";
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+		gpio = <&tlmm 126 0>;
+		enable-active-high;
+		regulator-boot-on;
+	};
+
+	display_panel_vddd: display_panel_vddd {
+		compatible = "regulator-fixed";
+		regulator-name = "display_panel_vddd";
+		regulator-min-microvolt = <1500000>;
+		regulator-max-microvolt = <1500000>;
+		gpio = <&tlmm 42 0>;
+		enable-active-high;
+		regulator-boot-on;
+    };
+
 	disp_rdump_memory: disp_rdump_region@b8000000 {
-		reg = <0xb8000000 0x00800000>;
+		reg = <0xb8000000 0x01400000>;
 		label = "disp_rdump_region";
 	};
 };
@@ -93,7 +122,6 @@
 		      "mdp_core_clk";
 	vddio-supply = <&L12B>;
 	vci-supply = <&L13B>;
-	vdd-supply = <&L11B>;
 };
 
 &sde_dsi1 {
@@ -121,11 +149,11 @@
 		      "mdp_core_clk";
 	vddio-supply = <&L12B>;
 	vci-supply = <&L13B>;
-	vdd-supply = <&L11B>;
 
 };
 
 &mdss_mdp {
+	qcom,sde-wakeup-with-touch;
 	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &sde_wb1 &sde_wb2 &sde_rscc &sde_dp>;
 };
 
