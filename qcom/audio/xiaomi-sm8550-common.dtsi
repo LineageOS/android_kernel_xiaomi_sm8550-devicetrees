@@ -1,0 +1,102 @@
+#include "kalama-audio-overlay.dtsi"
+
+&cdc_dmic01_gpios {
+	status = "disabled";
+};
+
+&cdc_dmic23_gpios {
+	status = "disabled";
+};
+
+&cdc_dmic45_gpios {
+	status = "disabled";
+};
+
+&cdc_dmic67_gpios {
+	status = "disabled";
+};
+
+&fm_i2s1_gpios {
+	status = "disabled";
+};
+
+&wsa_macro {
+	status = "disabled";
+};
+
+&wsa_spkr_en02 {
+	status = "disabled";
+};
+
+&wsa_spkr_en13 {
+	status = "disabled";
+};
+
+&wsa_swr_gpios {
+	status = "disabled";
+};
+
+&wsa2_swr_gpios {
+	status = "disabled";
+};
+
+&wsa884x_0220 {
+	status = "disabled";
+};
+
+&wsa884x_0221 {
+	status = "disabled";
+};
+
+&wsa884x_2_0220 {
+	status = "disabled";
+};
+
+&wsa884x_2_0221 {
+	status = "disabled";
+};
+
+&kalama_snd {
+	qcom,sec-mi2s-gpios = <&cdc_sec_tdm_gpios>;
+	qcom,msm-mbhc-gnd-swh = <0>;
+	qcom,msm-mbhc-hphl-swh = <0>;
+	qcom,msm-mbhc-usbc-audio-supported = <1>;
+	qcom,tdm-audio-intf = <1>;
+	qcom,tdm-clk-attribute = <4 4 4 4 4 4 4 4>;
+	qcom,tdm-max-slots = <4>;
+	qcom,uart-audio-sw-gpio = <&sbu_uart_en>;
+	qcom,wsa-max-devs = <0>;
+};
+
+&spf_core_platform {
+	cdc_sec_tdm_gpios: sec_tdm_pinctrl {
+			status = "ok";
+			compatible = "qcom,msm-cdc-pinctrl";
+			pinctrl-0 = <&tdm1_clk_active &tdm1_ws_active &tdm1_din_active &tdm1_dout_active>;
+			pinctrl-1 = <&tdm1_clk_sleep &tdm1_ws_sleep &tdm1_din_sleep &tdm1_dout_sleep>;
+			pinctrl-names = "aud_active", "aud_sleep";
+			#gpio-cells = <0>;
+	};
+};
+
+&soc {
+	sbu_uart_en: msm_cdc_pinctrl@7 {
+		compatible = "qcom,msm-cdc-pinctrl";
+		pinctrl-0 = <&sbu_uart_en_active>;
+		pinctrl-1 = <&sbu_uart_en_idle>;
+		pinctrl-names = "aud_active", "aud_sleep";
+		#gpio-cells = <0>;
+	};
+};
+
+&lpass_cdc {
+	qcom,num-macros = <3>;
+};
+
+&wcd938x_codec {
+	qcom,cdc-micbias1-mv = <2750>;
+	qcom,cdc-micbias2-mv = <2750>;
+	qcom,cdc-micbias3-mv = <2750>;
+	qcom,cdc-micbias4-mv = <2750>;
+	qcom,cdc-vdd-mic-bias-voltage = <3296000 3960000>;
+};
