@@ -1,9 +1,5 @@
 #include <dt-bindings/msm-camera.h>
 
-&qupv3_2 {
-	compatible = "qcom,geni-se-qup", "simple-bus";
-};
-
 &soc {
 	led_flash_triple_rear_wide: qcom,camera-flash1 {
 		cell-index = <1>;
@@ -148,8 +144,8 @@
 		regulator-names = "cam_vio", "cam_vdig", "cam_clk", "cam_vana",
 			"cam_vaf", "cam_v_custom1";
 		rgltr-cntrl-support;
-		rgltr-min-voltage = <1800000 1104000 0 2904000 2960000 1800000>;
-		rgltr-max-voltage = <1800000 1104000 0 2904000 2960000 1800000>;
+		rgltr-min-voltage = <1800000 1104000 0 2800000 2960000 1800000>;
+		rgltr-max-voltage = <1800000 1104000 0 2800000 2960000 1800000>;
 		rgltr-load-current = <3500 913200 0 91300 103000 63100>;
 		gpio-no-mux = <0>;
 		pinctrl-names = "cam_default", "cam_suspend";
@@ -274,8 +270,8 @@
 		regulator-names = "cam_vio", "cam_vdig", "cam_clk", "cam_vana",
 			"cam_vaf", "cam_v_custom1";
 		rgltr-cntrl-support;
-		rgltr-min-voltage = <1800000 1104000 0 2904000 2960000 1800000>;
-		rgltr-max-voltage = <1800000 1104000 0 2904000 2960000 1800000>;
+		rgltr-min-voltage = <1800000 1104000 0 2800000 2960000 1800000>;
+		rgltr-max-voltage = <1800000 1104000 0 2800000 2960000 1800000>;
 		rgltr-load-current = <3500 913200 0 91300 103000 63100>;
 		gpio-no-mux = <0>;
 		pinctrl-names = "cam_default", "cam_suspend";
@@ -471,7 +467,6 @@
 		clock-rates = <24000000>;
 		status = "ok";
 	};
-
 };
 
 &cam_cci2 {
@@ -551,7 +546,6 @@
 		clock-rates = <24000000>;
 		status = "ok";
 	};
-
 };
 
 &i3c0 {
@@ -559,11 +553,10 @@
 	i3c-scl-hz = <12500000>;
 	dfs-index = <0>;
 	i2c-scl-hz = <100000>;
-	compatible = "qcom,geni-i3c", "simple-bus";
 	status = "ok";
 
-	actuator_i3c_triple_wide: qcom,actuator1@c {
-		cell-index = <4>;
+	actuator_i3c_triple_wide: qcom,actuator@c {
+		cell-index = <8>;
 		compatible = "qcom,cam-i2c-actuator", "qcom,actuator";
 		reg = <0x0C 0x00 0x10>;
 		cam_vaf-supply = <&L7N>;
@@ -576,8 +569,8 @@
 		status = "ok";
 	};
 
-	eeprom_i3c_wide: qcom,eeprom2@50 {
-		cell-index = <7>;
+	eeprom_i3c_wide: qcom,eeprom@50 {
+		cell-index = <8>;
 		reg = <0x50 0x00 0x10>;
 		compatible = "qcom,cam-i2c-eeprom", "qcom,eeprom";
 		cam_vio-supply = <&L5N>;
@@ -590,8 +583,8 @@
 		regulator-names = "cam_vio", "cam_vdig", "cam_clk", "cam_vana",
 			"cam_vaf", "cam_v_custom1";
 		rgltr-cntrl-support;
-		rgltr-min-voltage = <1800000 1104000 0 2904000 2960000 1800000>;
-		rgltr-max-voltage = <1800000 1104000 0 2904000 2960000 1800000>;
+		rgltr-min-voltage = <1800000 1104000 0 2800000 2960000 1800000>;
+		rgltr-max-voltage = <1800000 1104000 0 2800000 2960000 1800000>;
 		rgltr-load-current = <3500 913200 0 91300 103000 63100>;
 		gpio-no-mux = <0>;
 		pinctrl-names = "cam_default", "cam_suspend";
@@ -636,8 +629,8 @@
 		regulator-names = "cam_vio", "cam_vdig", "cam_clk", "cam_vana",
 			"cam_vaf", "cam_v_custom1";
 		rgltr-cntrl-support;
-		rgltr-min-voltage = <1800000 1104000 0 2904000 2960000 1800000>;
-		rgltr-max-voltage = <1800000 1104000 0 2904000 2960000 1800000>;
+		rgltr-min-voltage = <1800000 1104000 0 2800000 2960000 1800000>;
+		rgltr-max-voltage = <1800000 1104000 0 2800000 2960000 1800000>;
 		rgltr-load-current = <3500 913200 0 91300 103000 63100>;
 		gpio-no-mux = <0>;
 		pinctrl-names = "cam_default", "cam_suspend";
