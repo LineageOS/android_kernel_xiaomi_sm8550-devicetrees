@@ -60,8 +60,7 @@ KALAMA_BOARDS += \
 		 kalamap-hdk-overlay.dtbo \
 		 kalamap-sg-hhg-overlay.dtbo \
 		 kalamap-rb5-gen2-overlay.dtbo \
-		 kalamap-aim300-overlay.dtbo \
-		 socrates-sm8550-overlay.dtbo
+		 kalamap-aim300-overlay.dtbo
 
 NOAPQ_KALAMA_BOARDS += \
 		 kalama-rumi-overlay.dtbo \
@@ -70,6 +69,9 @@ NOAPQ_KALAMA_BOARDS += \
 		 kalama-baagha-cdp-overlay.dtbo \
 		 kalama-baagha-mtp-overlay.dtbo
 
+ifeq ($(CONFIG_TARGET_PRODUCT_SOCRATES),y)
+dtb-y += socrates-sm8550-overlay.dtbo $(KALAMA_BASE_DTB) $(KALAMA_APQ_BASE_DTB)
+else
 kalama-dtb-$(CONFIG_ARCH_KALAMA) += \
 	$(call add-overlays, $(KALAMA_BOARDS) $(NOAPQ_KALAMA_BOARDS),$(KALAMA_BASE_DTB))\
 	$(call add-overlays, $(KALAMA_BOARDS) $(APQ_KALAMA_BOARDS),$(KALAMA_APQ_BASE_DTB))
@@ -77,6 +79,7 @@ kalama-overlays-dtb-$(CONFIG_ARCH_KALAMA) += $(KALAMA_BOARDS) $(NOAPQ_KALAMA_BOA
 kalama_le-overlays-dtb-$(CONFIG_ARCH_KALAMA) += $(KALAMA_BOARDS) $(NOAPQ_KALAMA_BOARDS) $(KALAMA_BASE_DTB) $(KALAMA_APQ_BASE_DTB)
 kalama_lu-overlays-dtb-$(CONFIG_ARCH_KALAMA) += $(KALAMA_BOARDS) $(NOAPQ_KALAMA_BOARDS) $(KALAMA_BASE_DTB) $(KALAMA_APQ_BASE_DTB)
 dtb-y += $(kalama-dtb-y)
+endif
 
 CROW_BASE_DTB += crow.dtb
 
