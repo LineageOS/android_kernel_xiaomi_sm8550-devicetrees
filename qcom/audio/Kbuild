@@ -6,6 +6,8 @@ endif
 
 ifeq ($(CONFIG_TARGET_PRODUCT_SOCRATES),y)
 dtbo-y += socrates-audio-mtp.dtbo
+else ifeq ($(CONFIG_TARGET_PRODUCT_FUXI),y)
+dtbo-y += fuxi-audio-mtp.dtbo
 else
 dtbo-y += \
                  kalama-audio-cdp.dtbo \

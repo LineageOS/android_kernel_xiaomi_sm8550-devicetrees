@@ -69,6 +69,8 @@ NOAPQ_KALAMA_BOARDS += \
 
 ifeq ($(CONFIG_TARGET_PRODUCT_SOCRATES),y)
 dtb-y += socrates-sm8550-overlay.dtbo $(KALAMA_BASE_DTB) $(KALAMA_APQ_BASE_DTB)
+else ifeq ($(CONFIG_TARGET_PRODUCT_FUXI),y)
+dtb-y += fuxi-sm8550-overlay.dtbo $(KALAMA_BASE_DTB) $(KALAMA_APQ_BASE_DTB)
 else
 kalama-dtb-$(CONFIG_ARCH_KALAMA) += \
 	$(call add-overlays, $(KALAMA_BOARDS) $(NOAPQ_KALAMA_BOARDS),$(KALAMA_BASE_DTB))\

@@ -2,6 +2,8 @@ ifneq ($(CONFIG_ARCH_QTI_VM), y)
 dtbo-$(CONFIG_ARCH_KALAMA) += display/kalama-sde.dtbo
 ifeq ($(CONFIG_TARGET_PRODUCT_SOCRATES),y)
 dtbo-y += display/socrates-sde-display-mtp-overlay.dtbo
+else ifeq ($(CONFIG_TARGET_PRODUCT_FUXI),y)
+dtbo-y += display/fuxi-sde-display-mtp-overlay.dtbo
 else
 dtbo-$(CONFIG_ARCH_KALAMA) += \
 		display/kalama-sde-display-rumi-overlay.dtbo \
