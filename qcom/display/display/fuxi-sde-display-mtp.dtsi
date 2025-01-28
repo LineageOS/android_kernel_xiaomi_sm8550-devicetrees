@@ -186,3 +186,11 @@
             &dsi_r66451_amoled_video>;
         };
 };
+
+&soc {
+	xiaomi-touch {
+		panel-primary = <&dsi_m3_38_0c_0a_dsc_cmd
+			&dsi_m3gl_38_0c_0a_dsc_cmd
+			&dsi_r66451_amoled_video>;
+	};
+};

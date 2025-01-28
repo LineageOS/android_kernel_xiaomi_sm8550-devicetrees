@@ -9,11 +9,6 @@
 #include <dt-bindings/clock/qcom,rpmh.h>
 
 &soc {
-	xiaomi_touch {
-		compatible = "xiaomi-touch";
-		status = "ok";
-		touch,name = "xiaomi-touch";
-	};
 	fingerprint_goodix {
 		compatible = "goodix,fingerprint";
 		l11c_vdd-supply = <&L9B>;
