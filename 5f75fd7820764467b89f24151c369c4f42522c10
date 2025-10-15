@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e220572e_32f9a642",
+        "filename": "qcom/vermeer-sm8550-overlay.dts",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 34560
+      },
+      "writtenOn": "2025-10-15T06:13:04Z",
+      "side": 1,
+      "message": "Excessive indentation",
+      "range": {
+        "startLine": 9,
+        "startChar": 119,
+        "endLine": 9,
+        "endChar": 123
+      },
+      "revId": "5f75fd7820764467b89f24151c369c4f42522c10",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
