@@ -171,6 +171,31 @@
 	};
 };
 
+&qupv3_se8_i2c {
+	status = "ok";
+	aw882xx_smartpa@34 {
+		compatible = "awinic,aw882xx_smartpa";
+		dc-flag = <0x0>;
+		irq-gpio = <&tlmm 0x62 0x2008>;
+		reg = <0x34>;
+		reset-gpio = <&tlmm 0xB6 0x0>;
+		sound-channel = <0x0>;
+		spksw-gpio = <&tlmm 0x44 0x0>;
+		status = "ok";
+		sync-flag = <0x1>;
+	};
+	aw882xx_smartpa@35 {
+		compatible = "awinic,aw882xx_smartpa";
+		dc-flag = <0x0>;
+		irq-gpio = <&tlmm 0x63 0x2008>;
+		reg = <0x35>;
+		reset-gpio = <&tlmm 0xB7 0x0>;
+		sound-channel = <0x1>;
+		status = "ok";
+		sync-flag = <0x1>;
+	};
+};
+
 &pm8550b_gpios {
 	pmic_therm {
 		pmic_therm_default: pmic_therm_default {

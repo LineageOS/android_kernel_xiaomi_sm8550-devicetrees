@@ -59,6 +59,36 @@
 		};
 	};
 
+	tdm1_dout {
+		tdm1_dout_active: tdm1_dout_active {
+			config {
+				bias-disable;
+				drive-strength = <0x8>;
+				output-high;
+				pins = "gpio124";
+			};
+
+			mux {
+				function = "i2s1_data1";
+				pins = "gpio124";
+			};
+		};
+
+		tdm1_dout_sleep: tdm1_dout_sleep {
+			config {
+				bias-pull-down;
+				drive-strength = <2>; /* 2 MA */
+				input-enable;
+				pins = "gpio124";
+			};
+
+			mux {
+				function = "gpio";
+				pins = "gpio124";
+			};
+		};
+	};
+
 	wifi_ctrl_irq: wifi_ctrl_irq {
 		mux {
 			pins = "gpio48";
