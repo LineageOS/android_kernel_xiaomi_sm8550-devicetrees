@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ea72e74_e2baa71a",
+        "filename": "qcom/display/display/vermeer-sde-display-mtp.dtsi",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 36466
+      },
+      "writtenOn": "2026-05-21T18:25:13Z",
+      "side": 0,
+      "message": "Instead of removing these, why not just ammend `/delete-node/ timing@2;` in the end?",
+      "range": {
+        "startLine": 93,
+        "startChar": 2,
+        "endLine": 99,
+        "endChar": 4
+      },
+      "revId": "13913424c9d0af031a8b8f9981c003bbb9632f73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
