@@ -70,6 +70,30 @@
       },
       "revId": "13913424c9d0af031a8b8f9981c003bbb9632f73",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3b47459_2154e3da",
+        "filename": "qcom/display/display/vermeer-sde-display-mtp.dtsi",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 35315
+      },
+      "writtenOn": "2026-05-22T08:05:07Z",
+      "side": 0,
+      "message": "ik, but I think since we don\u0027t use it, we might as well delete it completely",
+      "parentUuid": "9bec5913_b28db331",
+      "range": {
+        "startLine": 93,
+        "startChar": 2,
+        "endLine": 99,
+        "endChar": 4
+      },
+      "revId": "13913424c9d0af031a8b8f9981c003bbb9632f73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
