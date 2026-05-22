@@ -22,6 +22,30 @@
       },
       "revId": "13913424c9d0af031a8b8f9981c003bbb9632f73",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b2eba20_11b9c47e",
+        "filename": "qcom/display/display/vermeer-sde-display-mtp.dtsi",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 35315
+      },
+      "writtenOn": "2026-05-22T00:39:53Z",
+      "side": 0,
+      "message": "For 90Hz, HyperOS doesn\u0027t use it either, leaving it has no effect",
+      "parentUuid": "5ea72e74_e2baa71a",
+      "range": {
+        "startLine": 93,
+        "startChar": 2,
+        "endLine": 99,
+        "endChar": 4
+      },
+      "revId": "13913424c9d0af031a8b8f9981c003bbb9632f73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
