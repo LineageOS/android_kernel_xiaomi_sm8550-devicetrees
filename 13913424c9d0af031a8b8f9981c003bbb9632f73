@@ -94,6 +94,30 @@
       },
       "revId": "13913424c9d0af031a8b8f9981c003bbb9632f73",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0692c02_1df2206b",
+        "filename": "qcom/display/display/vermeer-sde-display-mtp.dtsi",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 35546
+      },
+      "writtenOn": "2026-05-25T02:12:35Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "d3b47459_2154e3da",
+      "range": {
+        "startLine": 93,
+        "startChar": 2,
+        "endLine": 99,
+        "endChar": 4
+      },
+      "revId": "13913424c9d0af031a8b8f9981c003bbb9632f73",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
