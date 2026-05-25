@@ -33,6 +33,23 @@
       "message": "Same for dsi-panel-n11-42-02-0a-dsc-cmd.dtsi",
       "revId": "afc25fbcb48fec7675a7f4dffe7aff748b1b3533",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d73a4d8c_fc072e07",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 35546
+      },
+      "writtenOn": "2026-05-25T02:12:11Z",
+      "side": 1,
+      "message": "Likewise, 90 Hz is unnecessary",
+      "revId": "afc25fbcb48fec7675a7f4dffe7aff748b1b3533",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
